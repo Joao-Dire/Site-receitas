@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    
+    box-sizing: border-box;
 }
 
 :root {
     --cor-primaria: #DA8370;
     --cor-secundaria: #F4BC87;
-    --cor-fonte: #ffff
+    --cor-fonte: #ffff;
+    --borda:1.25rem
 }
 
 body {
@@ -37,7 +38,7 @@ li {
 .lista {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    gap: 4rem;
     padding-right: 5rem;
     font-size: 2vmin;
 }
@@ -51,10 +52,59 @@ a {
 h1, h2 {
     color: var(--cor-fonte);
     line-height: 2rem;
+    font-size: 2vmin;
 }
 
 .container-conteudo {
-    display: inline-block;
-    height: 100vh;
     width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem; 
+}
+
+.imagem-comida {
+    object-fit: cover;
+    width: 100%;;
+    height: 100%;
+}
+
+.container-imagem-comida {
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    height: 80vh;
+    border-radius: var(--borda);
+}
+
+.sobre-receitas {
+    display: block;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-receita {
+    margin-top: 4rem;
+    width: auto;
+    height: 100%;
+    background-color: var(--cor-primaria);
+    border-radius: var(--borda);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.titulo-receita {
+    margin-top: 2rem;
+    font-size: 3vmin;
+    text-align: center;
+    font-style: oblique;
+}
+
+input {
+    display: grid;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: var(--borda);
 }
